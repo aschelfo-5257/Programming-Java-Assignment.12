@@ -47,7 +47,7 @@ public class DoublyLinkedList {
         System.out.println();
     }
 
-    public void displayReverse() { // displayReverse() Add backward traversal (from tail to head).
+    public void displayReverse() { // displayReverse(): Add backward traversal (from tail to head).
         Node current = tail;
         while (current != null) {
             System.out.print(current.data + " "); 
@@ -56,7 +56,7 @@ public class DoublyLinkedList {
         System.out.println();
     }
 
-    public void addAtFront(int data) { // addAtFront() Add node insertion at the front .
+    public void addAtFront(int data) { // addAtFront(): Add node insertion at the front .
         Node newNode = new Node(data);
         if (head == null) {
             head = tail = newNode;
