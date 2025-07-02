@@ -1,5 +1,3 @@
-import java.util.ListIterator;
-
 /**
  * Represents a node in a doubly linked list.
  */
@@ -17,11 +15,6 @@ class Node {
         this.prev = null;
     }
 }
-
-/**
- * A basic implementation of a doubly linked list with functionality
- * to add nodes at the end and display the list.
- */
 
 public class DoublyLinkedList {
     private Node head;
@@ -75,7 +68,3 @@ public class DoublyLinkedList {
         list.display();
     }
 }
-/**
- * A basic implementation of a doubly linked list with functionality
- * to add nodes at the end and display the list.
- */
