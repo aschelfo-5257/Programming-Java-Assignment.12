@@ -1,4 +1,6 @@
-public class Node {
+import java.util.ListIterator;
+
+class Node {
     int data;
     Node next;
     Node prev;
@@ -9,6 +11,10 @@ public class Node {
         this.prev = null;
     }
 }
+
+public class DoublyLinkedList {
+    private Node head;
+    private Node tail;
 
     public void addAtEnd(int data) {
         Node newNode = new Node(data);
@@ -28,5 +34,13 @@ public class Node {
             current = current.next;
         }
         System.out.println();
+    }
+
+    public static void main(String[] args) {
+        DoublyLinkedList list = new DoublyLinkedList();
+        list.addAtEnd(10);
+        list.addAtEnd(20);
+        list.addAtEnd(30);
+        list.display(); // Output: 10 20 30
     }
 }
