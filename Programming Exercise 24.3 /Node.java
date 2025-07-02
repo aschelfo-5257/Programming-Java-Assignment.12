@@ -7,14 +7,14 @@ class Node {
     int data; // int data: the value stored in the node.
     Node next; // Node next: reference to the next node.
     Node prev; // Node prev: reference to the previous node.
-
+    
+/**
+ * The constructor initializes these fields. next and prev are set to null by default.
+ */  
     public Node(int data) {
         this.data = data; 
         this.next = null;
         this.prev = null;
-/**
- * The constructor initializes these fields. next and prev are set to null by default.
- */        
     }
 }
 
@@ -45,6 +45,26 @@ public class DoublyLinkedList {
             current = current.next;
         }
         System.out.println();
+    }
+
+    public void displayReverse() { // displayReverse() Add backward traversal (from tail to head).
+        Node current = tail;
+        while (current != null) {
+            System.out.print(current.data + " "); 
+            current = current.prev;
+        }
+        System.out.println();
+    }
+
+    public void addAtFront(int data) { // addAtFront() Add node insertion at the front .
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = tail = newNode;
+        } else {
+            newNode.next = head;
+            head.prev = newNode;
+            head = newNode;
+        }
     }
 
     public static void main(String[] args) {
